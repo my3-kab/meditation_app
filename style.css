@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .app{
+     height: 100vh;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     
+ }
+ .timer,.sounds,.player{
+     height:80%;
+     flex:1;
+     display:flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+
+ }
+
+ .player{
+     position: relative;   
+ }
+
+ .player svg{
+     position: absolute;
+     height: 18vw;
+     top: 50%;
+     left:50%;
+     transform: translate(-50%,-50%) rotate(-90deg);
+     pointer-events:none;
+ }
+
+ .play{
+     height: 6vw;
+     width: 6vw;
+ }
+ .time-display{
+     position: absolute;
+     bottom: 10%;
+     color:rgba(46, 45, 45, 0.993);
+     font-size: 3vw;
+}
+
+ video{
+     position: fixed;
+     top:0%;
+     left:0%;
+     width:100%;
+     height: auto;
+     z-index: -10;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    video { 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    video {
+        width:auto;
+        height: 100%;
+    }
+}
+
+ .timer button,
+ .sounds button{
+     color:black;
+     width:30%;
+     height:10%;
+     background: none;
+     border:2px solid rgb(32, 18, 18);
+     cursor: pointer;
+     border-radius: 15px;
+     font-size:1.3vw;
+     padding: 1.2vw;
+     transition: all 0.5s ease;
+}
+
+.timer button:hover{
+    background:rgba(214, 209, 209, 0.5) ;
+    color:black;
+}
+
+.sounds button{
+    border:2px solid black;
+    height:7vw;
+    width:7vw;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.sounds button:nth-child(1){
+    background: rgba(36, 15, 226, 0.089);
+}
+
+.sounds button:nth-child(2){
+    background: rgba(36, 15, 226, 0.089);
+}
+
+.sounds button img{
+    max-width: 100%;
+    height: auto;
+    
+}
